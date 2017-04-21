@@ -1,0 +1,11 @@
+# This file is managed by puppet
+# This is a monit configuration file to check that apache is up
+
+check process apache2 matching "^/usr/sbin/apache2 -k start$"
+	start program = "/usr/sbin/service apache2 start"
+	stop program = "/usr/sbin/service apache2 stop"
+	if failed
+		host 127.0.0.1 port <%= @apache_port %> and
+		send "GET / HTTP/1.1\r\nHost: <%= @check_hostname %>\r\nUser-Agent: Monit\r\n\r\n"
+		expect "HTTP/[0-9\.]{1,3} [234].*"
+	with timeout <%= @check_timeout %> for <%= @check_rule %> then restart
