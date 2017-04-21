@@ -6,6 +6,7 @@
   "summary": "Puppet module for configure monit for Apache",
   "source": "https://github.com/silverstripeltd/puppet-ss_monit_apache",
   "project_page": "https://github.com/silverstripeltd/puppet-ss_monit_apache",
+  "dependencies": [],
   "requirements": [
     {
       "name": "puppet",
