@@ -1,0 +1,23 @@
+{
+  "name": "puppet-ss_monit_apache",
+  "version": "1.0.0",
+  "author": "SilverStripe Ltd",
+  "license": "BSD-3-Clause",
+  "summary": "Puppet module for configure monit for Apache",
+  "source": "https://github.com/silverstripeltd/puppet-ss_monit_apache",
+  "project_page": "https://github.com/silverstripeltd/puppet-ss_monit_apache",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    }
+  ]
+}
