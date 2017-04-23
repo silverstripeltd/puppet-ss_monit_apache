@@ -3,8 +3,10 @@
 ## Installation
 
 In your PuppetFile add
-```mod 'silverstripe-ss_monit_apache',
-	:git => 'git://github.com/silverstripeltd/puppet-ss_monit_apache.git'```
+```
+mod 'silverstripe-ss_monit_apache',
+	:git => 'git://github.com/silverstripeltd/puppet-ss_monit_apache.git'
+```
 
 ## Configuration
 - Ensure you have `mod 'echoes/monit', '1.1.1'` in your `Puppetfile`.
