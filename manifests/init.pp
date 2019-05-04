@@ -9,7 +9,7 @@ class ss_monit_apache (
 		ensure => present,
 		owner => root,
 		group => root,
-		mode => 0644,
+		mode => '0644',
 		content => template("ss_monit_apache/apache.erb"),
 		notify  => Service['monit'],
 		require  => File['/etc/monit/conf.d/'],
