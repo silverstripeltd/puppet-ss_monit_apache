@@ -5,6 +5,8 @@ class ss_monit_apache (
 	$check_hostname = "localhost"
 ) {
 
+	include ::monit
+
 	file { "/etc/monit/conf.d/apache":
 		ensure => present,
 		owner => root,
